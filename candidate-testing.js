@@ -1,65 +1,56 @@
 const input = require('readline-sync');
- 
 // TODO 2: modify your quiz app to ask 5 questions //
 
-// TODO 1.1a: Define candidateName //
+// TODO 1.1a: Define candidateName // 
+
 let candidateName = "";
+// TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 
-// TODO 1.2a: Define question, correctAnswer, and candidateAnswer /
+let question = "Who was the first American woman in space?";
+let correctAnswer = "Sally Ride";
+let candidateAnswer = "";
+let questions;
+let correctAnswers;
+let candidateAnswers;
 
-let question = " Who was the first American woman in space? ";
-let correctAnswer = " Sally Ride ";
-let candidateAnswer = "" ;
-let questions = "";
-let correctAnswers = null;
-let candidateAnswers = null;
- 
- 
+
 function askForName() {
- // TODO 1.1b: Ask for candidate's name //
- candidateName = input.question("What is your name?");
+  // TODO 1.1b: Ask for candidate's name //
+
+candidateName = input.question("What is your Name?");
 }
 
+function askQuestion() {
+  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
- // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
- function askQuestion(){
- candidateAnswer = input.question 
- }
+candidateAnswer = input.question(question);
 
-// TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
- candidateAnswer = input.question(question);
+}
 
 function gradeQuiz(candidateAnswers) {
 
-  console.log(" Candidate Name: " + candidateName);
-  console.log(" 1 " + question);
-  console.log(" Your Answer: " + candidateAnswer);
-  console.log(" Correct Answer: " + correctAnswer);
+  //TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-  if (candidateAnswer === correctAnswer) {
-    console.log( "Correct Answer!"); 
-  }
-   else {
-    console.log(" Incorrect Answer! ");
-  }
-   let grade; 
-
-   return grade;
-  }
-  function runProgram() {
- askForName();
-
- // TODO 1.1c: Ask for candidate's name //
-console.log(" Hello, " +  candidateName + "!");
-
-askQuestion();
-grade = gradeQuiz(this.candidateAnswers);
+if(candidateAnswer === "Sally Ride"){
+  console.log("correct");
+} else {
+  console.log("incorrect");
 }
 
- 
-// Don't write any code below this line //
-// And don't change these or your program will not run as expected 
+  let grade;
 
+  return grade;
+}
+function runProgram() {
+  askForName();
+  // TODO 1.1c: Ask for candidate's name //
+
+  console.log("Hello, " + candidateName + "!");
+  askQuestion();
+  gradeQuiz(this.candidateAnswers);
+}
+// Don't write any code below this line //
+// And don't change these or your program will not run as expected //
 module.exports = {
   candidateName: candidateName,
   question: question,
@@ -70,4 +61,4 @@ module.exports = {
   candidateAnswers: candidateAnswers,
   gradeQuiz: gradeQuiz,
   runProgram: runProgram
-}
+};
