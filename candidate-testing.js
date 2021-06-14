@@ -31,7 +31,7 @@ function askForName() {
 
 function gradeQuiz(candidateAnswers) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
-
+quiz.runProgram();
  if(candidateAnswer === "Sally Ride") {
     console.log("Correct Answer"); 
   }
