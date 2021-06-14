@@ -1,3 +1,5 @@
+const quiz = require('./candidate-testing');
+
 const input = require('readline-sync');
  
 // TODO 2: modify your quiz app to ask 5 questions //
@@ -14,14 +16,13 @@ let questions
 let correctAnswers 
 let candidateAnswers 
  
- 
+quiz.runProgram();
 function askForName() {
  // TODO 1.1b: Ask for candidate's name //
  candidateName = input.question("What is your name?");
 }
 
-
- function askQuestion(){
+function askQuestion(){
  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
  
  candidateAnswer = input.question; 
