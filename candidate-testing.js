@@ -50,9 +50,9 @@ candidateAnswer = grade;
 grade = grade/5*100;
   console.log(`Overall Grade: ${grade}% (${(grade/100) * 5} of 5 responses correct)`)
   if (grade >= 80) {
-    console.log(`Status: PASSED`)
+    console.log(`>>> Status: PASSED <<<`)
   } else {
-    console.log(`FAILED`)
+    console.log(`>>> Status: FAILED <<<`)
   }
   return grade;
 	}
