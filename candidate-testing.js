@@ -8,18 +8,18 @@ const input = require('readline-sync');
 
 let candidateName = "";
 let question = "Who was the first American woman in space? ";
-let questions = [  "Who was the first American woman in space?", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", "What is the minimum crew size for the ISS? "];
+let questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", "What is the minimum crew size for the ISS? "];
 let correctAnswer = "Sally Ride";
-let correctAnswers = ["Sally Ride",  "true",  "40",  "Trajectory",  "3"];
+let correctAnswers = [ "Sally Ride",  "true",  "40",  "Trajectory",  "3"];
 let candidateAnswer = "";
 let candidateAnswers = [];
-let consoleTest = "";
+let consoleTest = ""; 
 
 
   // TODO 1.1b: Ask for candidate's name //
 
 function askForName() {
-	candidateName = input.question("What is your name?")
+	candidateName = input.question("candidateName:")
 	return console.log(`Hello, ${candidateName}.`);
 }
 
@@ -28,7 +28,7 @@ function askForName() {
 
 function askQuestion() {
 	for (let i = 0; i < questions.length; i++) {
-		candidateAnswers[i] = input.question(`${questions[i]} Your Answer:`);
+		candidateAnswers[i] = input.question(`${questions[i]} Your Answer:\n`);
 
 		console.log(`Correct Answer: ${correctAnswers[i]}`);
 	}
